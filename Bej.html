@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bejelentkezés</title>
+
+</head>
+
+<body>
+    <fieldset style="width: 30%;">
+        <legend id="piros">Bejelentkezés</legend>
+        <input type="text" placeholder="Felhasználónév" required id="user">
+        <br>
+        <input type="password" placeholder="Jelszó" required id="pass">
+        <br>
+        <button onclick="belep(user.value, pass.value)">OK</button>
+    </fieldset>
+
+    <button onclick="document.body.style.backgroundColor ='lightgreen'">Háttér: világos zöld</button>
+    <button onclick="document.body.style.backgroundColor ='green'">Háttér: zöld</button>
+    <button onclick="document.body.style.backgroundColor ='red'">Háttér: piros</button>
+    <button onclick="document.getElementById('piros').style.color='red'">bejelentkezés színe: piros</button>
+
+
+
+    <p id="fel"></p>
+    <p id="jel"></p>
+
+    <script>
+        var username = ""
+        var password = ""
+        function belep(username, password) {
+            document.getElementById("fel").innerHTML = username
+            document.getElementById("jel").innerHTML = password
+            if (username == "pd") {
+                if (password == "asd123") {
+                    alert("Belépés sikeres!")
+                    window.open('https://peterffydominika.github.io/collage')
+                }
+
+            }
+            else {
+                alert("Sikertelen belépés!")
+                document.write("Helytelen felhasználónév vagy jelszó!")
+            }
+
+        }
+
+
+
+
+    </script>
+
+
+
+
+</body>
+
+</html>
