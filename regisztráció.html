@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regisztráció</title>
+</head>
+<body>
+    
+    <fieldset style="width: 0%;">
+        <input type="email" placeholder="email" required id="email"><br>
+        <input type="password" placeholder="jelszó" required id="pass1"><br>
+        <input type="password" placeholder="jelszó megerősítése" required id="pass2"><br>
+        <button onclick="belep(email.value, pass1.value, pass2.value)">Regisztrál</button>
+        <button onclick="beir(email.value, pass1.value, pass2.value)">Beír</button>
+    </fieldset>
+    <script>
+        var email = "" 
+        var pass1 = "" 
+        var pass2 = "" 
+
+        function beir(email, pass1, pass2){
+            if (email != ""){
+                if (pass1 == pass2) {
+                    localStorage.setItem(email, pass1)
+                    alert("Regisztrálva!")
+                }
+        }
+    }
+
+        function belep(email, pass1, pass2){
+            if(pass1 == pass2){
+                alert("Sikeres regisztrálás!")
+            }
+            else{
+                document.write("Nincs ilyen felhasználó")
+            }
+        }
+
+
+
+
+
+
+
+
+
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
